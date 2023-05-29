@@ -31,19 +31,8 @@ use App\Http\Models\AnnouncementModel;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/greeting', function () {
-    return 'Hello World';
-});
-
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
@@ -115,9 +104,9 @@ Route::put('/propedit/{id}', [ProposalsController::class, 'proposalseditt']);
 Route::get('/propdelete/{id}', [ProposalsController::class, 'proposalsdelete']);
 
 
-Route::get('/register', [UserController::class, 'register']);
-Route::post('/register', [UserController::class, 'store']);
-Route::get('/login', [UserController::class, 'login']);
-Route::post('/login', [UserController::class, 'authenticate']);
+// Route::get('/register', [UserController::class, 'register']);
+// Route::post('/register', [UserController::class, 'store']);
+// Route::get('/login', [UserController::class, 'login']);
+// Route::post('/login', [UserController::class, 'authenticate']);
   
 

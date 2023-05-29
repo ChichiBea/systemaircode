@@ -34,10 +34,10 @@ class AnnouncementController extends Controller
         return view('announcementupdate', ['announcements'=>$data]);
     }
     public function announcementeditt(Request $request, String $id){
-        $aboutus = AnnouncementModel::find($id);
+        $announce = AnnouncementModel::find($id);
         $input = $request->all();
-        $aboutus->update($input);
-        if($aboutus){
+        $announce->update($input);
+        if($announce){
             echo "successfully updated";
         }else{
             echo "Failed to update";
@@ -45,9 +45,9 @@ class AnnouncementController extends Controller
     }
 
     public function announcementdelete(Request $request, String $id){
-        $aboutuss = AnnouncementModel::find($id);
-        $aboutuss->delete($aboutuss);
-        if($aboutuss){
+        $announce = AnnouncementModel::find($id);
+        $announce->delete($announce);
+        if($announce){
             echo "successfully deleted";
         }else{
             echo "Failed to delete";

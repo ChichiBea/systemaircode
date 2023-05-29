@@ -1,7 +1,8 @@
 
 @extends('template')
 
-@section('title', 'New Update')
+@section('title', 'Update prop')
+
 
 <!-- ----------------------------------------------------- -->
 
@@ -9,47 +10,34 @@
                             <!-- Basic Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3 text-center">
-                                    <h6 class="m-0 font-weight-bold text-primary">UPDATE PROPOSALS</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Update Proposals</h6>
                                 </div>
-                                <div class="card-body">
-                                
+                                <div class="card-body"> 
                                 <form action="/propedit/{{$proposals->id}}" method="POST">
+                                     @method('PUT')
                                         @csrf 
-                                    <label for="">Firstname</label>
-                                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter Your Firstname" value={{$proposals->firstname}}>
-        
+                                    <label for="">Call for Proposals</label>
+                                    <input type="text" class="form-control" id="firstname" name="firstname" value={{$proposals->callforproposals}}>
                                     <br>
-                                    <label for="">Middlename</label>
-                                    <input type="text" class="form-control" id="middlename" name="middlename" placeholder="Enter Your Middlename" value={{$proposals->middlename}}>
+                                    <label for="">Start date</label>
+                                    <input type="text" class="form-control" id="startdate" name="startdate" value={{$proposals->startdate}}>
                                     <br>
-                                    <label for="">Lastname</label>
-                                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter Your Lastname" value={{$proposals->lastname}}>
+                                    <label for="">End date</label>
+                                    <input type="text" class="form-control" id="enddate" name="enddate" value={{$proposals->enddate}}>
                                     <br>
-                                    <label for="">Sex</label>
-                                    <select name="sex" class="form-control" id="sex" value={{$proposals->sex}}>
-                                    <option value="">Select</option>
-                                    <option value="Female">Female</option>
-                                    <option value="Male">Male</option>
-                                    </select>
                                     <br>
-                                    <label for="">Email</label>
-                                    <input type="text" class="form-control" class="form-control" id="email" name="email" placeholder="Enter Your email" value={{$proposals->email}}>
+                                    <label for="">Year to be funded</label>
+                                    <input type="text" class="form-control" id="yeartobefunded" name="yeartobefunded" value={{$proposals->yeartobefunded}}>
                                     <br>
-                                    <label for="">Mobile Number</label>
-                                    <input type="text" class="form-control" id="mobilenumber" name="mobilenumber" placeholder="Enter Your mobilenumber" value={{$proposals->mobilenumber}}>
+                                    <label for="">Funding agency</label>
+                                    <input type="text" class="form-control" id="fundingagency" name="fundingagency" value={{$proposals->fundingagency}}>
                                     <br>
-                                    <label for="">Address</label>
-                                    <input type="text" class="form-control" id="address" name="address" placeholder="Enter Your address" value={{$proposals->address}}>
+                                    <label for="">Status</label>
+                                    <input type="text" class="form-control" id="status" name="status" value={{$proposals->status}}>
                                     <br>
-                                    <label for="">Primary Institution</label>
-                                    <input type="text" class="form-control" id="primaryinstitution" name="primaryinstitution" placeholder="Enter Your Institution" value={{$proposals->primaryinstitution}}>
+                                    <label for="">Remarks</label>
+                                    <input type="text" class="form-control" id="remarks" name="remarks" value={{$proposals->remarks}}>
                                     <br>
-                                    <label for="">Position</label>
-                                    <select name="position" id="position" class="form-control" value={{$proposals->position}}>
-                                    <option value="">Select</option>
-                                    <option value="Student">Student</option>
-                                    <option value="Teacher">Teacher</option>
-                                    </select>
                                     <br>
                                     <button type="submit">Submit</button>
                                 </form>
@@ -60,47 +48,4 @@
                  
 
  <!-- --------------------------------------------------------------------------  -->
-
-            </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <!-- <span>Copyright &copy; Your Website 2020</span> -->
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+ 
